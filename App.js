@@ -65,6 +65,8 @@ function Home() {
       <h2>Home</h2>
       <Clock/>
       <Calculator/>
+      <Para/>
+      <Toggle/>
       <div id="chart_div"></div>
     </div>
   );
@@ -98,6 +100,7 @@ function About() {
       bar: {groupWidth: "95%"},
       legend: { position: "none" },
     };
+
     var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
     chart.draw(view, options);
   }
@@ -207,6 +210,64 @@ class Calculator extends React.Component {
           celsius={parseFloat(temperature)} />
 
       </fieldset>
+    );
+  }
+}
+
+// function 일때는 return 만
+function Textt(props) {
+  return(
+    <p>{props.text}</p>
+  )
+}
+
+// class 일때는 render
+class Para extends React.Component{
+  constructor(props){
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+    this.state = {index:0, text: 'bye'};
+  }
+
+  handleChange(e){
+    if(this.state.index == 0){
+      this.setState({index:this.state.index + 1 , text: 'hello'})
+    }else if (this.state.index == 1) {
+      this.setState({index:this.state.index + 1 , text: 'hellohello'})
+    }else{
+      this.setState({index:0 , text: 'bye'})
+    }
+  }
+
+  render(){
+    return(
+      <div>
+        <Textt text='lelel'/>
+        <p onClick={this.handleChange}>{this.state.text}</p>
+      </div>
+    )
+  }
+
+}
+
+class Toggle extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {isToggleOn: false};
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(){
+    this.setState(state =>({
+      isToggleOn: !this.state.isToggleOn
+    }))
+  }
+
+  render(){
+    return(
+      <button onClick={this.handleClick}>
+        {this.state.isToggleOn ? 'ON' : 'OFF'}
+      </button>
     );
   }
 }
