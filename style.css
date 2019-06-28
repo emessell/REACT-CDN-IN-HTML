@@ -1,4 +1,54 @@
-html, body{
-  height: 100%;
+html, body, div, span, iframe,
+/* h1, h2, h3, h4, h5, h6, */
+p, a, big, cite, code, img,
+small, strike, strong, sub,
+b, i, ol, ul, li, form, label,
+table, tbody, thead, tr, th, td,
+footer, header, nav, hr{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS RESET END */
+
+.navBar{
   width: 100%;
+}
+
+.navBar a{
+  width: 100%;
+  display: inline-block;
+  padding: 1em 0;
+}
+
+.navBar li{
+  width:33.33%;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.navBar li:hover{
+  background-color: #ccc;
+}
+
+/* Navigation */
+
+.content{
+  width: 1000px;
+  margin: 0 auto;
 }
