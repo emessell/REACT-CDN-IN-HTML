@@ -1,5 +1,8 @@
+html, body{
+	font-size: 14px;
+	color: #1e272e;
+}
 html, body, div, span, iframe,
-/* h1, h2, h3, h4, h5, h6, */
 p, a, big, cite, code, img,
 small, strike, strong, sub,
 b, i, ol, ul, li, form, label,
@@ -8,7 +11,6 @@ footer, header, nav, hr{
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -22,13 +24,98 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a{
+	text-decoration: none;
+}
 
 /* CSS RESET END */
 /* Navigation Start */
 
 /* Navigation End */
 
-.content{
-  width: 100%;
-  margin: 1em auto;
+.main{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.topnav a {
+	display: inline-block;
+	text-align: center;
+	padding: 25px 0;
+	width: 25%;
+	background-color: #ef5777;
+	color: white;
+}
+
+.topnav a:hover{
+	background-color: #f53b57;
+}
+
+.Clock{
+	font-size: 2.5rem;
+	text-align: center;
+	margin: 0 auto;
+}
+
+table {
+  border-collapse: collapse;
+	width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+th{
+	font-weight: bold;
+}
+th,td{
+	padding: 5px;
+	text-align: center;
+}
+
+///
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
 }

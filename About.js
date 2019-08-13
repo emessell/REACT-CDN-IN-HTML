@@ -31,7 +31,7 @@ function About() {
     chart.draw(view, options);
   }
   return (
-    <div className='content'>
+    <div className='main'>
       <h2>About</h2>
       <p>두번째 페이지입니다.</p>
       <div id="columnchart_values"></div>

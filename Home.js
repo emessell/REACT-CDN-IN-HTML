@@ -23,7 +23,7 @@ function Home() {
   }
 
   return (
-    <div className='content'>
+    <div className='main'>
       <h2>Home</h2>
       <Clock/>
       <Calculator/>

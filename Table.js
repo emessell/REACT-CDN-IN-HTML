@@ -2,27 +2,32 @@ class Table extends React.Component{
 	render(){
 		return(
 			<div className='content'>
+				<h2>Table</h2>
 				<table>
-					<tr>
-						<td>BBB</td>
-						<td>BBB</td>
-						<td>BBB</td>
-					</tr>
-					<tr>
-						<td>BBB</td>
-						<td>BBB</td>
-						<td>BBB</td>
-					</tr>
-					<tr>
-						<td>BBB</td>
-						<td>BBB</td>
-						<td>BBB</td>
-					</tr>
-					<tr>
-						<td>BBB</td>
-						<td>BBB</td>
-						<td>BBB</td>
-					</tr>
+					<thead>
+						<tr>
+							<th>BBB</th>
+							<td>BBB</td>
+							<td>BBB</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>BBB</th>
+							<td>BBB</td>
+							<td>BBB</td>
+						</tr>
+						<tr>
+							<th>BBB</th>
+							<td>BBB</td>
+							<td>BBB</td>
+						</tr>
+						<tr>
+							<th>BBB</th>
+							<td>BBB</td>
+							<td>BBB</td>
+						</tr>
+					</tbody>
 				</table>
 			</div>
 		)

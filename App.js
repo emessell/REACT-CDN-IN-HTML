@@ -8,7 +8,7 @@ const Redirect = window.ReactRouterDOM.Redirect;
 class App extends React.Component {
   render(){
     return (
-      <div>
+      <div className='main'>
         <Navigation></Navigation>
       </div>
     )
@@ -21,13 +21,15 @@ class Navigation extends Router {
       <Router>
         <div>
           <div className='topnav'>
-            <a><Link to="/">Home</Link></a>
-            <a><Link to="/about">About</Link></a>
-            <a><Link to="/table">Table</Link></a>
+            <Link to="/">Game</Link>
+            <Link to="/home">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/table">Table</Link>
           </div>
           <hr />
 
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Game} />
+          <Route path="/home" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/table" component={Table} />
         </div>
@@ -62,7 +64,7 @@ class Clock extends React.Component {
 
   render(){
     return(
-      <div>
+      <div className='Clock'>
         {this.state.date.toLocaleTimeString()}
       </div>
     )
