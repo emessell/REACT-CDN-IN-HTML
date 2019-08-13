@@ -1,0 +1,30 @@
+class Table extends React.Component{
+	render(){
+		return(
+			<div className='content'>
+				<table>
+					<tr>
+						<td>BBB</td>
+						<td>BBB</td>
+						<td>BBB</td>
+					</tr>
+					<tr>
+						<td>BBB</td>
+						<td>BBB</td>
+						<td>BBB</td>
+					</tr>
+					<tr>
+						<td>BBB</td>
+						<td>BBB</td>
+						<td>BBB</td>
+					</tr>
+					<tr>
+						<td>BBB</td>
+						<td>BBB</td>
+						<td>BBB</td>
+					</tr>
+				</table>
+			</div>
+		)
+	}
+}
