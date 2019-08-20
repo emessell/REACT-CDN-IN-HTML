@@ -21,15 +21,13 @@ class Navigation extends Router {
       <Router>
         <div>
           <div className='topnav'>
-            <Link to="/">Game</Link>
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/table">Table</Link>
           </div>
           <hr />
 
-          <Route exact path="/" component={Game} />
-          <Route path="/home" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/table" component={Table} />
         </div>
